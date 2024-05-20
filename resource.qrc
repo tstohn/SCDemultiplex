@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>media/DemultiplexingLogo.png</file>
+        <file>media/DemultiplexingLogo.svg</file>
+        <file>media/ConstantBlock.png</file>
+    </qresource>
+</RCC>
