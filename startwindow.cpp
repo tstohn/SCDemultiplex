@@ -24,8 +24,14 @@ StartWindow::StartWindow(QWidget *parent)
     svgWidget->resize(width, height);
 
     //ADD START BUTTON
-    ui->pushButton->setStyleSheet("QPushButton { font-weight: bold; }");
-    ui->pushButton->setFixedSize(ui->pushButton->size());
+    ui->DemultiplexButton->setStyleSheet("QPushButton { font-weight: bold; }");
+    ui->DemultiplexButton->setFixedSize(ui->DemultiplexButton->size());
+
+    ui->CreateMatrixButton->setStyleSheet("QPushButton { font-weight: bold; }");
+    ui->CreateMatrixButton->setFixedSize(ui->CreateMatrixButton->size());
+
+    ui->AnalyseButton->setStyleSheet("QPushButton { font-weight: bold; }");
+    ui->AnalyseButton->setFixedSize(ui->AnalyseButton->size());
 }
 
 StartWindow::~StartWindow()
@@ -33,7 +39,7 @@ StartWindow::~StartWindow()
     delete ui;
 }
 
-void StartWindow::on_pushButton_clicked()
+void StartWindow::on_DemultiplexButton_clicked()
 {
     mw = new MainWindow();
     mw->show();

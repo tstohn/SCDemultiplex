@@ -15,7 +15,7 @@ public:
     ~StartWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_DemultiplexButton_clicked();
 
 private:
     Ui::StartWindow* ui;

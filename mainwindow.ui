@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1254</width>
+    <height>763</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,50 +17,70 @@
    <widget class="QPushButton" name="RunButton">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>110</y>
+      <x>20</x>
+      <y>570</y>
       <width>91</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>START</string>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="ReadSequenceGraphicsView">
+   <widget class="RedSeqGraphicsView" name="ReadSequenceGraphicsView">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>110</y>
-      <width>401</width>
-      <height>321</height>
+      <x>150</x>
+      <y>170</y>
+      <width>991</width>
+      <height>381</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(53, 91, 255);
+border-color: rgb(34, 41, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
     </property>
    </widget>
    <widget class="QPushButton" name="HomeButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>171</width>
-      <height>51</height>
+      <x>10</x>
+      <y>10</y>
+      <width>141</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>HOME</string>
     </property>
    </widget>
-   <widget class="QLabel" name="ConstantBlock">
+   <widget class="SeqBlockLabel" name="ConstantBlock">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>130</y>
-      <width>121</width>
-      <height>31</height>
+      <y>180</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>CONSTANT</string>
@@ -69,17 +89,20 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="VariableBlock">
+   <widget class="SeqBlockLabel" name="VariableBlock">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>180</y>
-      <width>121</width>
-      <height>31</height>
+      <y>260</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
     </property>
     <property name="text">
      <string>VARIABLE</string>
@@ -88,17 +111,17 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="UMIBlock">
+   <widget class="SeqBlockLabel" name="UMIBlock">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>230</y>
-      <width>121</width>
-      <height>31</height>
+      <y>350</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>UMI</string>
@@ -107,17 +130,17 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="RNABlock">
+   <widget class="SeqBlockLabel" name="RNABlock">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>280</y>
-      <width>121</width>
-      <height>31</height>
+      <y>430</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string>RNA-seq</string>
@@ -126,19 +149,138 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="ClearButton">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>170</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>CLEAR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Contant</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Variable</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>UMI</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RNAseq</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TopBar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>1251</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>590</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>570</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>STATUS DEMULTIPLEXING</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1254</width>
      <height>24</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SeqBlockLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">readassemblyevents.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RedSeqGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">readassemblyevents.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
