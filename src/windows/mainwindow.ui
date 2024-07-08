@@ -33,9 +33,9 @@
    <widget class="RedSeqGraphicsView" name="ReadSequenceGraphicsView">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>180</x>
       <y>170</y>
-      <width>991</width>
+      <width>961</width>
       <height>381</height>
      </rect>
     </property>
@@ -92,10 +92,10 @@ border-color: rgb(34, 41, 255);</string>
    <widget class="SeqBlockLabel" name="VariableBlock">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>260</y>
-      <width>111</width>
-      <height>41</height>
+      <width>150</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -112,13 +112,19 @@ border-color: rgb(34, 41, 255);</string>
     </property>
    </widget>
    <widget class="SeqBlockLabel" name="UMIBlock">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>350</y>
-      <width>111</width>
-      <height>41</height>
+      <x>10</x>
+      <y>360</y>
+      <width>150</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
     </property>
     <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
@@ -133,14 +139,14 @@ border-color: rgb(34, 41, 255);</string>
    <widget class="SeqBlockLabel" name="RNABlock">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>430</y>
-      <width>111</width>
-      <height>41</height>
+      <x>10</x>
+      <y>469</y>
+      <width>150</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Box</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>RNA-seq</string>
@@ -273,12 +279,12 @@ border-color: rgb(34, 41, 255);</string>
   <customwidget>
    <class>SeqBlockLabel</class>
    <extends>QLabel</extends>
-   <header location="global">readassemblyevents.h</header>
+   <header location="global">src/readassemblyevents.h</header>
   </customwidget>
   <customwidget>
    <class>RedSeqGraphicsView</class>
    <extends>QGraphicsView</extends>
-   <header location="global">readassemblyevents.h</header>
+   <header location="global">src/readassemblyevents.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

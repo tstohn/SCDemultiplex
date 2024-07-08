@@ -1,4 +1,4 @@
-#include "startwindow.h"
+#include "src/windows/startwindow.h"
 
 #include <QApplication>
 

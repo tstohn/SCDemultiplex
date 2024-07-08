@@ -7,7 +7,7 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsWidget>
 #include <QGraphicsGridLayout>
-#include <qpixmaplayoutitem.h>
+#include "../qpixmaplayoutitem.h"
 #include <iostream>
 #include "seqblockparameters.h"
 #include <QGraphicsProxyWidget>
@@ -48,7 +48,7 @@ class MainWindow : public QMainWindow
 
         std::vector<QGraphicsProxyWidget*> seqBlockProxyList;
         std::vector<seqBlockParameters*> seqBlockUiList;
-        std::vector<QPixmapLayoutItem*> seqBlockImages;
+        std::vector<QGraphicsProxyWidget*> seqBlockImages;
         std::vector<NoTwoFingerGestureFilter*> seqBlockFilters;
 
     private slots:
